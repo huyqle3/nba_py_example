@@ -44,8 +44,6 @@ def get_games(date):
 
   for team in line_score:
     if team["GAME_SEQUENCE"] != current_game_sequence:
-      current_game_sequence += 1
-
       current_game["TEAM_1_ABBREVIATION"] = team["TEAM_ABBREVIATION"]
       current_game["TEAM_1_WINS_LOSSES"] = team["TEAM_WINS_LOSSES"]
       

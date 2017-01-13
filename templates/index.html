@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block body %}
+<body>
+	<br></br>
+
+	<div class="container">
+		<h3>{{ pretty_date_today }}</h3>
+
+		<div class="row">
+			<div class="col-lg-5">
+				<div class="list-group">
+					{% for game in games %}
+						<a class="score-boxes list-group-item list-group-item-action" href="/boxscores/{{ game["GAME_ID"] }}">
+							<div class="row">
+								<div class="col-xs-4">
+								    {{ game["TEAM_1_ABBREVIATION"] }} {{ game["TEAM_1_PTS"] }}
+                                    <br>
+                                    {{ game["TEAM_1_WINS_LOSSES"] }}
+								</div>
+								<div class="col-xs-4">
+									-&nbsp;
+								</div>
+								<div class="col-xs-4">
+								    {{ game["TEAM_2_ABBREVIATION"] }} {{ game["TEAM_2_PTS"] }}
+                                    <br>
+                                    {{ game["TEAM_2_WINS_LOSSES"] }}
+								</div>
+							</div>
+						</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+{% endblock %}
