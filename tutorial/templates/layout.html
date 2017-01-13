@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<head>
+    <title>bballfast - {{ title }}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename='stylesheets/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='stylesheets/style.css') }}" rel="stylesheet" type="text/css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Don't waste your time waiting for NBA basketball statistics, scores, player, and team information to load. bballfast makes finding nba stats and games easy and most importantly fast and relevant.">
+    <meta name="keywords" content="NBA,basketball,statistics,stats,bballfast,bball,fast">
+    <meta name="author" content="microwavesam">
+    <link rel="shortcut icon" href="">
+</head>
+
+<nav class="navbar navbar-static-top navbar-inverse bg-inverse">
+    <a class="navbar-brand" href="/">bballfast</a>
+</nav><!-- /.navbar -->
+
+{% block body %}
+{% endblock %}
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="{{ url_for('static', filename='javascripts/jquery-3.1.1.slim.min.js') }}"></script>
+<script src="{{ url_for('static', filename='javascripts/tether.min.js') }}"></script>
+<script src="{{ url_for('static', filename='javascripts/bootstrap.min.js') }}"></script>
